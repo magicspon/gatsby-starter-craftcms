@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- build:cms-->
+{% set stamp = ".1530823019326" %}
+<!-- endbuild-->
+<html lang="en-gb" dir="ltr" class="no-js">
+  <head>
+	  <meta charset="utf-8">
+    <title>Straightline</title>
+	  <meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1" viewport-fit="cover">
+		{# Robots blocking for staging URLs #}
+		{{ 'mudbank' in siteUrl ? '<meta name="robots" content="noindex, nofollow">' : '' }}
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#cb1d18">
+		<meta name="theme-color" content="#cb1d18">
+		<meta content="telephone=no" name="format-detection">
+	  <script>var html=document.getElementsByTagName("html")[0];html.classList?html.classList.remove("no-js"):html.className=el.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," ");</script>
+		{% if stamp != '' %}
+			{% block critical_css %}
+				<!-- build:critical-->
+				<!-- endbuild -->
+			{% endblock %}
+			<link rel="preload" href="/dist/css/style{{ stamp }}.css" as="style" onload="this.rel='stylesheet'">
+			<noscript><link rel="stylesheet" href="/dist/css/style{{ stamp }}.css"></noscript>
+
+		{% else %}
+			<link rel="stylesheet" href="/dist/css/style{{ stamp }}.css">
+		{% endif %}
+		<!-- inject:js -->
+		<script>loadjs=function(){var e=function(){},n={},t={},r={};function i(e,n){if(e){var i=r[e];if(t[e]=n,i)for(;i.length;)i[0](e,n),i.splice(0,1)}}function c(n,t){n.call&&(n={success:n}),t.length?(n.error||e)(t):(n.success||e)(n)}function s(n,t,r,i){var c,o,f=document,u=r.async,a=(r.numRetries||0)+1,l=r.before||e,h=n.replace(/^(css|img)!/,"");i=i||0,/(^css!|\.css$)/.test(n)?(c=!0,(o=f.createElement("link")).rel="stylesheet",o.href=h):/(^img!|\.(png|gif|jpg|svg)$)/.test(n)?(o=f.createElement("img")).src=h:((o=f.createElement("script")).src=n,o.async=void 0===u||u),!(o.onload=o.onerror=o.onbeforeload=function(e){var f=e.type[0];if(c&&"hideFocus"in o)try{o.sheet.cssText.length||(f="e")}catch(e){f="e"}if("e"==f&&(i+=1)<a)return s(n,t,r,i);t(n,f,e.defaultPrevented)})!==l(n,o)&&f.head.appendChild(o)}function o(e,t,r){var o,f;if(t&&t.trim&&(o=t),f=(o?r:t)||{},o){if(o in n)throw"LoadJS";n[o]=!0}!function(e,n,t){var r,u,a=(e=e.push?e:[e]).length,l=a,h=[];for(r=function(e,n,t){if("e"==n&&h.push(e),"b"==n){if(!t)return;h.push(e)}var r;--a||(c(f,r=h),i(o,r))},u=0;u<l;u++)s(e[u],r,t)}(e,0,f)}return o.ready=function(e,n){return function(e,i){var s,o,f,u=[],a=(e=e.push?e:[e]).length,l=a;for(s=function(e,t){t.length&&u.push(e),--l||c(n,u)};a--;)o=e[a],(f=t[o])?s(o,f):(r[o]=r[o]||[]).push(s)}(e),o},o.done=function(e){i(e,[])},o.reset=function(){n={},t={},r={}},o.isDefined=function(e){return e in n},o}();</script>
+		<script>!function(e){"use strict";var n=function(n,t,o){var i,r=e.document,d=r.createElement("link");if(t)i=t;else{var a=(r.body||r.getElementsByTagName("head")[0]).childNodes;i=a[a.length-1]}var l=r.styleSheets;d.rel="stylesheet",d.href=n,d.media="only x",function e(n){if(r.body)return n();setTimeout(function(){e(n)})}(function(){i.parentNode.insertBefore(d,t?i:i.nextSibling)});var f=function(e){for(var n=d.href,t=l.length;t--;)if(l[t].href===n)return e();setTimeout(function(){f(e)})};function s(){d.addEventListener&&d.removeEventListener("load",s),d.media=o||"all"}return d.addEventListener&&d.addEventListener("load",s),d.onloadcssdefined=f,f(s),d};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);</script>
+		<script>!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
+		<!-- endinject -->
+		<script>
+			if(!window.HTMLPictureElement || !('sizes' in document.createElement('img'))){
+				document.createElement('picture');
+				loadjs("/dist/js/picturefill.min.js");
+			}
+			loadCSS('//fonts.googleapis.com/css?family=Roboto')
+		</script>
+  </head>
+
+  <body>
+    {# {% include '@header' %} #}
+		<main id="page-wrapper">
+			<div class="page-child">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</main>
+		{# {% include '@footer' %} #}
+		{# {% include '@symbols' %} #}
+		<script>
+			loadjs([
+				'//polyfill.io/v2/polyfill.min.js?features=default-3.6,IntersectionObserver,es6,Object.entries', 
+				'/dist/js/vendor.bundle{{ stamp }}.js',
+				'/dist/js/app.bundle{{ stamp }}.js'
+			], {async: false});
+		</script>
+  </body>
+</html>

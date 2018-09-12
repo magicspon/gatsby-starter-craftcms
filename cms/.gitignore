@@ -1,0 +1,5 @@
+/.env
+/.env.php
+/.idea
+/vendor
+.DS_Store

@@ -1,0 +1,17 @@
+/* META */
+
+	Built with: Gatsbyjs, Craft, PHP, HTML, CSS, React, Graphql
+
+/* THANKS */
+
+	gatsbyjs:         https://www.gatsbyjs.org/
+  craftcms:         http://craftcms.com/
+  craftql:          https://github.com/markhuot/craftql/
+  react:            https://reactjs.org/
+  rematch:          https://github.com/rematch/rematch
+  tailwindcss       https://tailwindcss.com/
+  emotion           https://emotion.sh/
+	pose							http://popmotion.io/pose/	
+
+	and many others
+

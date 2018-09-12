@@ -1,0 +1,79 @@
+{
+	"extends": ["airbnb", "prettier", "plugin:jest/recommended"],
+	"plugins": ["react", "jsx-a11y", "import"],
+	"rules": {
+		"consistent-return": "off",
+		"func-names": "off",
+		"global-require": "off",
+		"guard-for-in": "off",
+		"import/extensions": "off",
+		"import/first": "off",
+		"import/newline-after-import": "off",
+		"import/no-extraneous-dependencies": "off",
+		"import/no-unresolved": "off",
+		"import/prefer-default-export": "off",
+		"indent": ["warn", "tab", { "SwitchCase": 1 }],
+		"jsx-a11y/anchor-is-valid": "off",
+		"jsx-a11y/click-events-have-key-events": "off",
+		"jsx-a11y/interactive-supports-focus": "off",
+		"jsx-a11y/mouse-events-have-key-events": "off",
+		"jsx-a11y/media-has-caption": "off",
+		"no-lonely-if": "off",
+		"no-nested-ternary": "off",
+		"no-param-reassign": "warn",
+		"no-shadow": "off",
+		"no-underscore-dangle": "off",
+		"no-unneeded-ternary": "warn",
+		"no-unused-expressions": "warn",
+		"no-unused-vars": ["warn"],
+		"no-useless-escape": "off",
+		"prefer-destructuring": "off",
+		"quotes": ["warn", "single"],
+		"react/forbid-prop-types": "off",
+		"react/jsx-filename-extension": "off",
+		"react/jsx-indent": "off",
+		"react/jsx-indent-props": "off",
+		"react/jsx-one-expression-per-line": "off",
+		"react/jsx-uses-vars": [2],
+		"react/no-array-index-key": "warn",
+		"react/no-danger": "off",
+		"react/no-unused-state": "warn",
+		"react/prefer-stateless-function": "off",
+		"react/prop-types": "off",
+		"semi": ["warn", "never"],
+		"camelcase": "off"
+	},
+	"parser": "babel-eslint",
+	"settings": {
+		"import/core-modules": []
+	},
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"globals": {
+		"log": true,
+		"debug": true,
+		"require": true,
+		"ENV": true,
+		"process": true,
+		"global": true,
+		"PRODUCTION": true,
+		"TASK_CONFIG": true,
+		"PATH_CONFIG": true,
+		"BUILD_TYPE": true,
+		"SERVER": true,
+		"__STAMP__": true,
+		"tw": true,
+		"graphql": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 8,
+		"ecmaFeatures": {
+			"jsx": true,
+			"sourceType": "module",
+			"allowImportExportEverywhere": false
+		},
+		"sourceType": "module"
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"name": "craftcms/craft",
+	"description": "Craft CMS",
+	"keywords": [
+		"craft",
+		"cms",
+		"craftcms",
+		"project"
+	],
+	"license": "MIT",
+	"homepage": "https://craftcms.com/",
+	"type": "project",
+	"support": {
+		"email": "support@craftcms.com",
+		"issues": "https://github.com/craftcms/cms/issues",
+		"forum": "https://craftcms.stackexchange.com/",
+		"source": "https://github.com/craftcms/cms",
+		"docs": "https://craftcms.com/docs",
+		"rss": "https://craftcms.com/changelog.rss"
+	},
+	"require": {
+		"php": ">=7.0.0",
+		"craftcms/cms": "3.0.23.1",
+		"vlucas/phpdotenv": "^2.4.0",
+		"verbb/image-resizer": "2.0.3",
+		"craftcms/redactor": "2.1.6",
+		"markhuot/craftql": "^1.0.0",
+		"verbb/feed-me": "3.0.0-beta.17",
+		"nystudio107/craft-imageoptimize": "1.4.38",
+		"ournameismud/straightline": "1.0.0",
+		"ether/seo": "v3.4.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"modules\\straightlinemodule\\": "modules/straightlinemodule/src"
+		}
+	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "straightline/"
+		}
+	],
+	"config": {
+		"optimize-autoloader": true
+	},
+	"scripts": {
+		"post-root-package-install": [
+			"@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+		],
+		"post-create-project-cmd": [
+			"@composer dump-autoload -o",
+			"@php craft setup/welcome"
+		]
+	}
+}
