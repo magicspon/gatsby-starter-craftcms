@@ -4,7 +4,7 @@ Use Craftcms as a headless cms. Pull data into Gatsby via craftql that exposes t
 
 ## Demo
 
-wearestraightline(https://wearestraightline.com)
+([wearestraightline](https://wearestraightline.com))
 
 ## Features
 
