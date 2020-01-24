@@ -4,16 +4,16 @@ import { graphql } from 'gatsby'
 import * as T from '@/types'
 import { cleanData } from '@/utils'
 import useConstant from '@/hooks/useConstant'
-import SEOMatic from '@/components/SEOMatic'
+// import SEOMatic from '@/components/SEOMatic'
 function IndexPage({ data }) {
-	const { seo, id } = useConstant(() => cleanData(data))
+	const { id, previewTitle, previewDescription } = useConstant(() =>
+		cleanData(data)
+	)
 
 	return (
-		<>
-			<SEOMatic {...seo} />
-
-			<pre>{JSON.stringify(id, null, 2)}</pre>
-		</>
+		<div className="py-64">
+			<h1>{previewTitle}</h1>
+		</div>
 	)
 }
 
@@ -24,8 +24,7 @@ IndexPage.propTypes = {
 				shape({
 					id: string.isRequired
 				})
-			),
-			seo: shape(T.craftSEOMatic)
+			)
 		})
 	})
 }
@@ -36,10 +35,13 @@ export const query = graphql`
 			entries(slug: "home") {
 				... on Craft_home_home_Entry {
 					id
+					previewTitle
+					previewDescription
+
+					previewImage {
+						...optimisedHero
+					}
 				}
-			}
-			seomatic(uri: "/", asArray: true) {
-				...seoQuery
 			}
 		}
 	}

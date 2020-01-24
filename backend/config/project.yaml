@@ -1,4 +1,4 @@
-dateModified: 1579876726
+dateModified: 1579884460
 email:
   fromEmail: hello@spon.io
   fromName: 'Gatsby & Craft'
@@ -8,6 +8,8 @@ fieldGroups:
     name: Assets
   5f33fd21-4d55-4c7f-8f41-cf5e48843fd6:
     name: SEO
+  6d43d39b-ed62-45b6-a75f-d56174e5f3f6:
+    name: Hero
   d0dba0f3-aa03-434f-96e8-c2678c8d99ee:
     name: Preview
   d5dda8a2-ab54-4127-a767-9bad87720c5f:
@@ -177,14 +179,25 @@ fields:
     type: nystudio107\imageoptimize\fields\OptimizedImages
 graphql:
   schemas:
+    570aa09c-4747-4d0c-92c3-89b6f10927a2:
+      isPublic: false
+      name: Gatsby
+      scope:
+        - 'sections.50e24775-4e5d-4695-9ec7-5caa0cd2aee5:read'
+        - 'entrytypes.7321791e-8392-401d-8909-8dcbc337b99a:read'
+        - 'volumes.c02ec083-4118-449e-91d2-39813f9c6221:read'
     be6d574c-17a5-4e8e-9aa5-92008c1d0eab:
-      isPublic: true
+      isPublic: '1'
       name: 'Public Schema'
       scope:
         - 'sections.50e24775-4e5d-4695-9ec7-5caa0cd2aee5:read'
         - 'entrytypes.7321791e-8392-401d-8909-8dcbc337b99a:read'
         - 'volumes.c02ec083-4118-449e-91d2-39813f9c6221:read'
 plugins:
+  cp-field-inspect:
+    edition: standard
+    enabled: false
+    schemaVersion: 1.0.0
   image-optimize:
     edition: standard
     enabled: true
@@ -229,6 +242,11 @@ sections:
         titleLabel: Title
     handle: home
     name: Home
+    previewTargets:
+      -
+        label: Craft
+        refresh: '1'
+        urlFormat: 'http://localhost:3000/'
     propagationMethod: all
     siteSettings:
       7fe918b1-73fa-4e29-8098-5f34e22b23d5:
@@ -264,6 +282,16 @@ users:
   requireEmailVerification: true
 volumes:
   c02ec083-4118-449e-91d2-39813f9c6221:
+    fieldLayouts:
+      a9e5340f-5229-4db4-8744-3ae28782c003:
+        tabs:
+          -
+            fields:
+              e23177f4-d532-4d70-9ee7-c4fc45645aeb:
+                required: false
+                sortOrder: 1
+            name: Optimisations
+            sortOrder: 1
     handle: images
     hasUrls: true
     name: Images

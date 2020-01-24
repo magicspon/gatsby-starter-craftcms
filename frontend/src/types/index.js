@@ -22,6 +22,11 @@ export const craftImage = {
 	})
 }
 
+const socialMetaProps = shape({
+	content: string,
+	property: string
+})
+
 export const craftSEOMatic = {
 	metaTitleContainer: shape({
 		title: shape({

@@ -1,4 +1,6 @@
 /.env
 /.idea
 /vendor
+/config/license.key
 .DS_Store
+/web/assets/
