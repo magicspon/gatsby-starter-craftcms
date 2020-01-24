@@ -31,8 +31,7 @@ module.exports = api => {
 				{
 					root: ['./'],
 					alias: {
-						'@': './src',
-						'~': './'
+						'@': './src'
 					}
 				}
 			],
@@ -45,10 +44,7 @@ module.exports = api => {
 			[
 				isStoryBook || isTest ? '@babel/preset-env' : 'babel-preset-gatsby',
 				{
-					modules: isTest ? 'commonjs' : false,
-					targets: {
-						browsers: ['safari 9', 'ie 11', '> 0.5%']
-					}
+					modules: isTest ? 'commonjs' : false
 				}
 			],
 			(isStoryBook || isTest) && '@babel/preset-react'

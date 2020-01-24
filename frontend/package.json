@@ -1,8 +1,8 @@
 {
-	"name": "goodgive",
+	"name": "gatsby-craft",
 	"private": true,
-	"description": "Source code for goodgive frontend",
-	"version": "0.1.0",
+	"description": "Gatsby Starter - Craft CMS",
+	"version": "2.0.0",
 	"author": "Dave Stockley <hello@spon.io>",
 	"bugs": {
 		"url": "https://github.com/magicspon/gatsby-starter-craftcms/issues"
@@ -57,12 +57,12 @@
 		"@storybook/react": "^5.3.3",
 		"@storybook/theming": "^5.3.3",
 		"@testing-library/cypress": "^5.0.1",
-		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/jest-dom": "^5.0.2",
 		"@testing-library/react": "^9.4.0",
 		"autoprefixer": "^9.7.4",
 		"babel-alias-quokka-plugin": "^1.0.9",
 		"babel-eslint": "^10.0.3",
-		"babel-jest": "^24.9.0",
+		"babel-jest": "^25.1.0",
 		"babel-loader": "^8.0.5",
 		"babel-plugin-emotion": "^10.0.27",
 		"babel-plugin-inline-react-svg": "^1.1.0",
@@ -87,7 +87,7 @@
 		"gatsby-cli": "^2.8.27",
 		"gatsby-plugin-postcss": "^2.1.19",
 		"identity-obj-proxy": "^3.0.0",
-		"jest": "^24.9.0",
+		"jest": "^25.1.0",
 		"jest-fetch-mock": "^3.0.1",
 		"jsdom-quokka-plugin": "^1.0.15",
 		"postcss-loader": "^3.0.0",
@@ -95,7 +95,7 @@
 		"postcss-object-fit-images": "^1.1.2",
 		"precss": "^4.0.0",
 		"prettier": "^1.18.2",
-		"purgecss-webpack-plugin": "^1.6.0",
+		"purgecss-webpack-plugin": "^2.0.5",
 		"react-test-renderer": "^16.9.0",
 		"storybook-addon-jsx": "^7.1.6",
 		"string-hash": "^1.1.3",
@@ -137,7 +137,7 @@
 		}
 	},
 	"scripts": {
-		"dev": "gatsby develop",
+		"dev": "gatsby develop --port 3000",
 		"start": "npm run dev",
 		"storybook": "STORYBOOK_ENV=storybook start-storybook -s ./static -p 6006",
 		"storybook:build": "STORYBOOK_ENV=storybook build-storybook -s ./static -c .storybook -o docs",
