@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"strictNullChecks": false,
+		"module": "esnext",
+		"target": "ESNEXT",
+		"baseUrl": "./src/js",
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "node",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"lib": ["es2015", "es2017", "dom", "dom.iterable"],
+		"noImplicitAny": false
+	},
+	"exclude": ["./node_modules/"],
+	"include": ["./src/**/*.js"]
+}

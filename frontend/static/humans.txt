@@ -1,0 +1,15 @@
+                            
+/* TEAM */
+Your title: Michael Kudenko, Dave Stockley & General Studios
+Site: goodgive.co.nz
+Location: New Zealand / England
+
+
+/* THANKS */
+NYStudio 107, Gatsby			
+
+/* SITE */                
+Last update: 2020/01/22   
+Standards: HTML5, CSS3, ES2019, PHP
+Components: React, Gatsby, Framer-Motion, CraftCMS, Laravel,
+Software: VS Code

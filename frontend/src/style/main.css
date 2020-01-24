@@ -1,0 +1,236 @@
+@font-face {
+	font-family: 'inter-regular';
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/Inter-Regular.woff2') format('woff2'),
+		url('/fonts/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'inter-medium';
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/Inter-Medium.woff2') format('woff2'),
+		url('/fonts/Inter-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'inter-semi-bold';
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/Inter-SemiBold.woff2') format('woff2'),
+		url('/fonts/Inter-SemiBold.woff') format('woff');
+}
+
+/* @font-face {
+	font-family: 'inter-bold';
+	font-weight: normal;
+	font-style: normal;
+	src: url('/fonts/Inter-Bold.woff2') format('woff2'),
+		url('/fonts/Inter-Bold.woff') format('woff');
+} */
+
+@tailwind base;
+@tailwind utilities;
+@tailwind screens;
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+html,
+body,
+[id='root'] {
+	height: 100%;
+	min-height: 100%;
+}
+
+body {
+	@apply font-sans text-black;
+}
+
+body::after {
+	@apply sr-only;
+	content: 'root';
+}
+
+img,
+svg {
+	display: block;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+@screen sm {
+	body::after {
+		content: 'sm';
+	}
+}
+
+@screen md {
+	body::after {
+		content: 'md';
+	}
+}
+
+@screen lg {
+	body::after {
+		content: 'lg';
+	}
+}
+
+@screen xl {
+	body::after {
+		content: 'xl';
+	}
+}
+
+.wrapper {
+	@apply w-full px-6 mx-auto;
+	/* 1300px */
+	max-width: 81.25rem;
+
+	@screen sm {
+		@apply px-8;
+	}
+
+	@screen md {
+		@apply px-12;
+	}
+
+	@screen lg {
+		@apply px-16;
+	}
+}
+
+[id='___gatsby'] {
+	transition: opacity 300ms ease;
+}
+
+.ReactModal__Body--open {
+	[id='___gatsby'] {
+		opacity: 0.3;
+	}
+}
+
+.ReactModal__Overlay {
+	opacity: 0;
+	transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+	opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+	opacity: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+/**
+https://ricostacruz.com/nprogress/
+**/
+
+#nprogress {
+	pointer-events: none;
+}
+
+#nprogress .bar {
+	background: theme('colors.blue.600');
+
+	position: fixed;
+	z-index: 1031;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 100px;
+	height: 100%;
+	box-shadow: 0 0 10px theme('colors.blue.600'),
+		0 0 5px theme('colors.blue.600');
+	opacity: 1;
+
+	transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+	display: block;
+	position: fixed;
+	z-index: 1031;
+	top: 15px;
+	right: 15px;
+}
+
+.spinner-icon {
+	box-sizing: border-box;
+
+	border-radius: 50%;
+
+	animation: nprogress-spinner 400ms linear infinite;
+}
+
+#nprogress .spinner-icon {
+	border: solid 2px transparent;
+	border-top-color: theme('colors.blue.600');
+	border-left-color: theme('colors.blue.600');
+	display: block;
+	position: fixed;
+	z-index: 1031;
+	top: 15px;
+	right: 15px;
+	width: 18px;
+	height: 18px;
+}
+
+.nprogress-custom-parent {
+	overflow: hidden;
+	position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+	position: absolute;
+}
+
+@keyframes nprogress-spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.if-no-sticky {
+	display: none;
+}
+
+.no-sticky .if-no-sticky {
+	display: block;
+}

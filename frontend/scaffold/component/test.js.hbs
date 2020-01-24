@@ -1,0 +1,14 @@
+import React from 'react'
+import { render, cleanup } from '~/__tests__/utils/wrapper'
+import {{ properCase name }} from '../{{ properCase name }}'
+
+describe('<{{ properCase name }} />', () => {
+	afterEach(() => {
+		cleanup()
+	})
+
+  it('{{ properCase name }} renders correctly', () => {
+    const tree = render(<{{ properCase name }} />)
+    expect(tree).toMatchSnapshot()
+  })
+})

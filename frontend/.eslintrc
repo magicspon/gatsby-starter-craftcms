@@ -1,0 +1,90 @@
+{
+	"extends": ["airbnb", "prettier", "plugin:jest/recommended"],
+	"plugins": [
+		"react",
+		"jsx-a11y",
+		"import",
+		"react-hooks",
+		"cypress",
+		"compat"
+	],
+	"overrides": [
+		{
+			"files": ["*.spec.js"],
+			"rules": {
+				"jest/valid-expect": "off"
+			}
+		}
+	],
+	"rules": {
+		"camelcase": "off",
+		"compat/compat": "error",
+		"no-nested-ternary": "off",
+		"consistent-return": "off",
+		"func-names": "off",
+		"global-require": "off",
+		"guard-for-in": "off",
+		"import/extensions": "off",
+		"import/first": "off",
+		"import/newline-after-import": "off",
+		"import/no-extraneous-dependencies": "off",
+		"import/no-unresolved": "off",
+		"import/prefer-default-export": "off",
+		"react/require-default-props": "off",
+		"react/jsx-filename-extension": "off",
+		"react/jsx-indent": "off",
+		"no-unused-vars": "warn",
+		"react/jsx-indent-props": "off",
+		"react/jsx-one-expression-per-line": "off",
+		"react/no-unescaped-entities": "off",
+		"react/jsx-wrap-multilines": "off",
+		"react/no-array-index-key": "warn",
+		"react/prop-types": "warn",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"react/jsx-props-no-spreading": "off",
+		"jsx-a11y/label-has-for": [
+			2,
+			{
+				"components": ["Label", "label"],
+				"required": {
+					"every": ["nesting"]
+				},
+				"allowChildren": true
+			}
+		],
+		"jsx-a11y/label-has-associated-control": [
+			2,
+			{
+				"labelComponents": ["CustomInputLabel"],
+				"labelAttributes": ["label"],
+				"controlComponents": ["Checkbox"],
+				"depth": 3
+			}
+		]
+	},
+	"settings": {
+		"import/core-modules": [],
+		"polyfills": ["fetch"]
+	},
+	"env": {
+		"cypress/globals": true,
+		"browser": true
+	},
+	"globals": {
+		"API_URL": true,
+		"STRIPE_API_KEY": true,
+		"GOOGLE_API_KEY": true,
+		"SITE_URL": true
+	},
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"experimentalObjectRestSpread": true,
+			"jsx": true,
+			"sourceType": "module",
+			"allowImportExportEverywhere": false
+		},
+		"sourceType": "module"
+	}
+}

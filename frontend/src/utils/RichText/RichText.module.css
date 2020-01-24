@@ -1,0 +1,26 @@
+.content {
+	ul li:before {
+		content: '-';
+		margin-right: 0.3125rem;
+	}
+
+	a {
+		@apply text-red-600;
+
+		&:hover {
+			@apply underline;
+		}
+	}
+
+	p {
+		@apply mb-4 font-sans text-base leading-snug tracking-tight;
+
+		@screen lg {
+			@apply text-md;
+		}
+	}
+
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+}

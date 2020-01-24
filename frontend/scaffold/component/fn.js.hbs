@@ -1,0 +1,20 @@
+import React from 'react'
+import { string } from 'prop-types'
+import classNames from 'classnames'
+{{#if cssModules}}
+	// import styles from './{{ properCase name }}.module.css'
+{{/if}}
+
+function {{ properCase name }} ({ className }) {
+	return (
+		<div className={classNames(className, '' )}>
+			Hello {{ properCase name }}!
+		</div>
+	)
+}
+
+{{ properCase name }}.propTypes = {
+	className: string
+}
+
+export default {{ properCase name }}

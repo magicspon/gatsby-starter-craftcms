@@ -1,0 +1,274 @@
+dateModified: 1579876726
+email:
+  fromEmail: hello@spon.io
+  fromName: 'Gatsby & Craft'
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  0d3c1651-5f9a-4713-803a-1cb773511424:
+    name: Assets
+  5f33fd21-4d55-4c7f-8f41-cf5e48843fd6:
+    name: SEO
+  d0dba0f3-aa03-434f-96e8-c2678c8d99ee:
+    name: Preview
+  d5dda8a2-ab54-4127-a767-9bad87720c5f:
+    name: Common
+fields:
+  026df3f4-3827-467d-994c-79fec6f7bd82:
+    contentColumnType: text
+    fieldGroup: d0dba0f3-aa03-434f-96e8-c2678c8d99ee
+    handle: previewTitle
+    instructions: ''
+    name: 'Preview Title'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  04d69486-a6f2-45ae-a560-5c5749e9c42b:
+    contentColumnType: text
+    fieldGroup: d0dba0f3-aa03-434f-96e8-c2678c8d99ee
+    handle: previewDescription
+    instructions: ''
+    name: 'Preview Description'
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  14419a62-e16a-4c69-83ab-2e86cea5155d:
+    contentColumnType: string
+    fieldGroup: d0dba0f3-aa03-434f-96e8-c2678c8d99ee
+    handle: previewImage
+    instructions: ''
+    name: 'Preview Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:c02ec083-4118-449e-91d2-39813f9c6221'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:c02ec083-4118-449e-91d2-39813f9c6221'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: ''
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  4ada7fb0-22ee-46f1-9ef4-8c8ebb0d7af9:
+    contentColumnType: text
+    fieldGroup: 5f33fd21-4d55-4c7f-8f41-cf5e48843fd6
+    handle: seo
+    instructions: ''
+    name: SEO
+    searchable: true
+    settings:
+      elementDisplayPreviewType: google
+      facebookTabEnabled: ''
+      generalEnabledFields:
+        - seoTitle
+        - seoDescription
+        - seoImage
+      generalTabEnabled: '1'
+      sitemapTabEnabled: ''
+      twitterTabEnabled: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: nystudio107\seomatic\fields\SeoSettings
+  e1549d84-15d5-4025-ad1f-98532c37fe54:
+    contentColumnType: string
+    fieldGroup: 0d3c1651-5f9a-4713-803a-1cb773511424
+    handle: image
+    instructions: ''
+    name: Image
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:c02ec083-4118-449e-91d2-39813f9c6221'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:c02ec083-4118-449e-91d2-39813f9c6221'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: ''
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  e23177f4-d532-4d70-9ee7-c4fc45645aeb:
+    contentColumnType: text
+    fieldGroup: 0d3c1651-5f9a-4713-803a-1cb773511424
+    handle: optimisedHero
+    instructions: ''
+    name: 'Optimised Hero'
+    searchable: true
+    settings:
+      displayDominantColorPalette: '1'
+      displayLazyLoadPlaceholderImages: '1'
+      displayOptimizedImageVariants: '1'
+      ignoreFilesOfType:
+        - image/svg
+        - image/gif
+      variants:
+        -
+          aspectRatioX: '16'
+          aspectRatioY: '9'
+          format: jpg
+          quality: '82'
+          retinaSizes:
+            - '1'
+          useAspectRatio: '1'
+          width: '1200'
+        -
+          aspectRatioX: '16'
+          aspectRatioY: '9'
+          format: jpg
+          quality: '82'
+          retinaSizes:
+            - '1'
+          useAspectRatio: '1'
+          width: '992'
+        -
+          aspectRatioX: '4'
+          aspectRatioY: '3'
+          format: jpg
+          quality: '60'
+          retinaSizes:
+            - '1'
+          useAspectRatio: '1'
+          width: '768'
+        -
+          aspectRatioX: '4'
+          aspectRatioY: '3'
+          format: jpg
+          quality: '60'
+          retinaSizes:
+            - '1'
+          useAspectRatio: '1'
+          width: '576'
+    translationKeyFormat: null
+    translationMethod: none
+    type: nystudio107\imageoptimize\fields\OptimizedImages
+graphql:
+  schemas:
+    be6d574c-17a5-4e8e-9aa5-92008c1d0eab:
+      isPublic: true
+      name: 'Public Schema'
+      scope:
+        - 'sections.50e24775-4e5d-4695-9ec7-5caa0cd2aee5:read'
+        - 'entrytypes.7321791e-8392-401d-8909-8dcbc337b99a:read'
+        - 'volumes.c02ec083-4118-449e-91d2-39813f9c6221:read'
+plugins:
+  image-optimize:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.8
+sections:
+  50e24775-4e5d-4695-9ec7-5caa0cd2aee5:
+    enableVersioning: true
+    entryTypes:
+      7321791e-8392-401d-8909-8dcbc337b99a:
+        fieldLayouts:
+          d2aa6eae-267e-446a-a8a9-b72346ca011d:
+            tabs:
+              -
+                fields:
+                  026df3f4-3827-467d-994c-79fec6f7bd82:
+                    required: false
+                    sortOrder: 3
+                  04d69486-a6f2-45ae-a560-5c5749e9c42b:
+                    required: false
+                    sortOrder: 1
+                  14419a62-e16a-4c69-83ab-2e86cea5155d:
+                    required: false
+                    sortOrder: 2
+                name: Preview
+                sortOrder: 1
+              -
+                fields:
+                  4ada7fb0-22ee-46f1-9ef4-8c8ebb0d7af9:
+                    required: false
+                    sortOrder: 1
+                name: SEO
+                sortOrder: 2
+        handle: home
+        hasTitleField: true
+        name: Home
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: Title
+    handle: home
+    name: Home
+    propagationMethod: all
+    siteSettings:
+      7fe918b1-73fa-4e29-8098-5f34e22b23d5:
+        enabledByDefault: true
+        hasUrls: true
+        template: null
+        uriFormat: __home__
+    type: single
+siteGroups:
+  2f03bf45-8132-445b-a6ec-980fb7ec3677:
+    name: 'Gatsby & Craft'
+sites:
+  7fe918b1-73fa-4e29-8098-5f34e22b23d5:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-GB
+    name: 'Gatsby & Craft'
+    primary: true
+    siteGroup: 2f03bf45-8132-445b-a6ec-980fb7ec3677
+    sortOrder: 1
+system:
+  edition: pro
+  live: true
+  name: 'Gatsby & Craft'
+  schemaVersion: 3.4.6
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
+volumes:
+  c02ec083-4118-449e-91d2-39813f9c6221:
+    handle: images
+    hasUrls: true
+    name: Images
+    settings:
+      path: $BASE_PATH/assets/images
+    sortOrder: 1
+    type: craft\volumes\Local
+    url: '@web/assets/images/'
