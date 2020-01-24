@@ -69,7 +69,6 @@ module.exports = async ({ config, mode }) => {
 					options: {
 						importLoaders: 1,
 						modules: true
-						// localIdentName: '[local]-[hash:base64:5]'
 					}
 				},
 				'postcss-loader'
@@ -100,20 +99,7 @@ module.exports = async ({ config, mode }) => {
 		}
 	)
 
-	config.plugins.push(
-		new webpack.DefinePlugin({
-			STORYBOOK: JSON.stringify(true),
-			PRODUCTION: JSON.stringify(isProduction),
-			API_URL: JSON.stringify('http://backend.good-give.co.nz'),
-			STRIPE_API_KEY: JSON.stringify(
-				'pk_test_TXO9zFGWkJGVsJ97TJjUmxsx002iP8Iyu3'
-			)
-		})
-	)
-
 	config.resolve.alias['@'] = path.resolve(__dirname, '../src/')
-	config.resolve.alias['~'] = path.resolve(__dirname, '../static/')
-
 	config.resolve.mainFields = ['browser', 'module', 'main']
 
 	return config

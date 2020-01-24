@@ -1,7 +1,0 @@
-.header {
-	height: 4.5rem; /* 72px */
-
-	@screen md {
-		height: 5.5rem; /* 88px */
-	}
-}

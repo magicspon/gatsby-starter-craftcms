@@ -1,7 +1,0 @@
-.slide {
-	[class*='slide-visible'] {
-		& > div {
-			@apply bg-gray-100;
-		}
-	}
-}

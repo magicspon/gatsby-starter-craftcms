@@ -6,8 +6,6 @@ registerRequireContextHook()
 
 require('jest-fetch-mock').enableMocks()
 
-global.API_URL = 'https://good-give.contora.co.nz/'
-
 // eslint-disable-next-line no-underscore-dangle
 global.___loader = {
 	enqueue: jest.fn()

@@ -92,6 +92,7 @@
 		"jsdom-quokka-plugin": "^1.0.15",
 		"postcss-loader": "^3.0.0",
 		"postcss-nested": "^4.1.2",
+		"postcss-object-fit-images": "^1.1.2",
 		"precss": "^4.0.0",
 		"prettier": "^1.18.2",
 		"purgecss-webpack-plugin": "^1.6.0",

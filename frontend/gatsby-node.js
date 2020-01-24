@@ -25,13 +25,7 @@ const purgeConfig = {
 		}
 	],
 	whitelist: [''],
-	whitelistPatterns: [
-		/headroom/,
-		/module--/,
-		/ReactModal/,
-		/nprogress/,
-		/slide-visible/
-	],
+	whitelistPatterns: [/headroom/, /module--/, /ReactModal/, /nprogress/],
 	whitelistPatternsChildren: [/nprogress/]
 }
 
@@ -104,20 +98,16 @@ exports.onCreateWebpackConfig = ({ actions, stage, getConfig, rules }) => {
 						]
 					}
 				]
-			},
-			plugins: [
-				new webpack.DefinePlugin({
-					API_URL: JSON.stringify(process.env.API_URL),
-					STRIPE_API_KEY: JSON.stringify(process.env.STRIPE_API_KEY),
-					GOOGLE_API_KEY: JSON.stringify(process.env.GOOGLE_API_KEY),
-					SITE_URL: JSON.stringify(process.env.SITE_URL)
-				})
-			]
+			}
+			// plugins: [
+			// 	new webpack.DefinePlugin({
+			// 		CMS_URL: JSON.stringify(process.env.CMS_URL),
+			// 	})
+			// ]
 		})
 	)
 
 	// Add PurgeCSS in production
-	// See: https://github.com/gatsbyjs/gatsby/issues/5778#issuecomment-402481270
 	if (stage.includes('build')) {
 		actions.setWebpackConfig({
 			plugins: [new PurgeCssPlugin(purgeConfig)]
